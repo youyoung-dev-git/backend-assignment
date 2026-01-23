@@ -131,8 +131,8 @@ class OrderServiceTest {
         Order order = orderService.createOrder(normalMember.getId(), product.getId(), quantity, null);
 
         // then
-        assertThat(order.getDeliveryFee()).isEqualTo(3000);
-        assertThat(order.getTotalPrice()).isEqualTo(20000 + 3000); // 상품가 + 배송비
+        assertThat(order.getTotalPrice()).isEqualTo(20000); // 상품가 (배송비 별도)
+        assertThat(order.getDeliveryFee()).isEqualTo(3000);  // 3만원 미만 배송비
     }
 
     /**
