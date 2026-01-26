@@ -153,7 +153,7 @@ class OrderServiceTest {
 //                .build());
 //
 //        int threadCount = 100;
-//        ExecutorService executorService = Executors.newFixedThreadPool(32);
+//        ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
 //        CountDownLatch readyLatch = new CountDownLatch(threadCount);  // 모든 스레드 준비 대기
 //        CountDownLatch startLatch = new CountDownLatch(1);            // 동시 시작 신호
 //        CountDownLatch endLatch = new CountDownLatch(threadCount);    // 모든 스레드 완료 대기
